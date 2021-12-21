@@ -13,7 +13,7 @@ test_runApplicationCorrectSum =
     $ do
       someIntValue <- forAll intGen
       let result = SUT.runApplication someIntValue
-          expectedResult = 45 + someIntValue
+          expectedResult = 42 + someIntValue
       assert (result == expectedResult)
 
 -- | Simple unit test
