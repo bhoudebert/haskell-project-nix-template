@@ -1,5 +1,6 @@
-name: CI
-on: push
+name: "CI"
+on:
+  pull_request:
 jobs:
   nix-build:
     strategy:
