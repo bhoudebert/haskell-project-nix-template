@@ -1,5 +1,5 @@
-name: "CI"
-on: [push]
+name: CI
+on: push
 jobs:
   nix-build:
     strategy:
