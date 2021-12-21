@@ -1,0 +1,164 @@
+cabal-version: 1.24
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-project-nix-template
+version:        1.0.0.0
+description:    Please see the README on GitHub at <https://github.com/bhoudebert/haskell-project-nix-template/blob/main/README.md>
+homepage:       https://github.com/bhoudebert/haskell-project-nix-template/blob/main/README.md
+bug-reports:    https://github.com/bhoudebert/haskell-project-nix-template/issues
+author:         Benjamin Houdebert
+maintainer:     bhoudebert@gmail.com
+license:        GPL-3.0-or-later
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/bhoudebert/haskell-project-nix-template
+
+library
+  exposed-modules:
+      Application
+  other-modules:
+      Paths_haskell_project_nix_template
+  hs-source-dirs:
+      src
+  default-extensions:
+      BangPatterns
+      BinaryLiterals
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveDataTypeable
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      OverloadedLists
+      OverloadedStrings
+      PartialTypeSignatures
+      PatternGuards
+      PolyKinds
+      QuasiQuotes
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      TypeSynonymInstances
+      ViewPatterns
+      StrictData
+  ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -j -O0 -fwrite-ide-info -hiedir .hie-files -interactive-print=Text.Pretty.Simple.pPrint
+  build-depends:
+      base >=4.7 && <5
+    , pretty-simple
+  default-language: Haskell2010
+
+executable haskell-project-nix-template-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -j -O0 -hiedir .hie-files -interactive-print=Text.Pretty.Simple.pPrint -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , pretty-simple
+    , haskell-project-nix-template -any
+  default-language: Haskell2010
+
+test-suite haskell-project-nix-template-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      ApplicationSpec
+      Generators
+  hs-source-dirs:
+      test
+  default-extensions:
+      BangPatterns
+      BinaryLiterals
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveDataTypeable
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      OverloadedLists
+      OverloadedStrings
+      PartialTypeSignatures
+      PatternGuards
+      PolyKinds
+      QuasiQuotes
+      RankNTypes
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TemplateHaskell
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeOperators
+      TypeSynonymInstances
+      ViewPatterns
+      StrictData
+  ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -j -O0 -hiedir .hie-files -interactive-print=Text.Pretty.Simple.pPrint -threaded -rtsopts -with-rtsopts=-N -fno-warn-missing-signatures -fno-warn-incomplete-uni-patterns
+  build-depends:
+      base >=4.7 && <5
+    , HUnit
+    , hedgehog
+    , hspec-expectations-pretty-diff
+    , pretty-simple
+    , tasty
+    , tasty-discover
+    , tasty-hedgehog
+    , tasty-hspec
+    , tasty-hunit
+    , haskell-project-nix-template -any
+  default-language: Haskell2010
+  tasty-discover: tasty-discover

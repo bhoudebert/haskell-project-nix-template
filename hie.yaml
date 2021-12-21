@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "haskell-project-nix-template:lib:haskell-project-nix-template"
+    - path: "./app"
+      component: "haskell-project-nix-template:exe:haskell-project-nix-template-exe"
+    - path: "./test"
+      component: "haskell-project-nix-template:test:haskell-project-nix-template-test"
