@@ -1,5 +1,7 @@
 # haskell-project-nix-template
 
+[![CI](https://github.com/bhoudebert/haskell-project-nix-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bhoudebert/haskell-project-nix-template/actions/workflows/ci.yml)
+
 WARNING: when renaming the project, be sure to add sources to control, at least `git add`, otherwise `haskell.nix` will not found your cabal file...
 
 ## Requirements
@@ -58,6 +60,10 @@ stan-hie
 Broken for now as it detects everything as non used.
 
 Guess: try to use flake to build it from repository.
+
+## CI
+
+github workflow example can be found in `.github/workflows/`
 
 ## Issue
 
